@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do10-991673528-Theater Pages</title>
+    <link href="./stylesheet/do10.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+</head>
+<body onload="createList(); makeHeader();makeFooter()">
+    <header id="navigation"></header>
+    <h3 id="popularMovies">Popular Movies</h3>
+    <div class="container">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/barbie.jpeg"></div>
+                <div class="swiper-slide"><img src="./images/pos1.jpeg"></div>
+                <div class="swiper-slide"><img src="./images/pos2.jpeg"></div>
+                <div class="swiper-slide"><img src="./images/pos4.jpeg"></div>
+                <div class="swiper-slide"><img src="./images/pos3.jpeg"></div>
+            </div>
+            <div class="caption">
+                <a href="#movieAvailability"><button class="headerButton">Book Tickets</button></a>
+                <a target="_blank" href="https://youtu.be/rN7EAneK2ko?si=1p5vomd_BZ9FqKG1">
+                    <button class="headerButton">Watch Trailer</button>
+                </a>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-button-next swiper-navBtn"></div>  
+        </div>
+    </div>
+    <div class="second-section">
+        <h3 id="movieAvailability">Select location for movie availability</h3>
+        <form action="./pages/report.html">
+                <div class="first-part">
+                    <div class="first-row">
+                        <div class="select">
+                            <select name="city" required id="city" onchange="getSelectedCity()"></select>
+                        </div>
+                        <div class="radio-input" id="radio-Burlington" onclick="checkRadio()" onchange="createMovieList()">
+                            <div class="radio-1" >
+                                <input type="radio" id="location1" class="location" name="location" value="1">
+                                <label class="location-label"for="location1">Silver City - 123 Main St.</label>
+                            </div>
+                            <div class="radio-2">
+                                <input type="radio" id="location2" class="location" name="location" value="3">
+                                <label class="location-label"for="location2">Galaxy Cinema - 456 Brant St.</label>
+                            </div>
+                            <div class="radio-3">
+                                <input type="radio" id="location3"class="location" name="location" value="2">
+                                <label class="location-label" for="location3">Cineplex - 789 Mainway Drive</label>
+                            </div>
+                        </div>
+                        <div class="radio-input" id="radio-Hamilton" onclick="checkRadio()" onchange="createMovieList()">
+                            <div class="radio-1">
+                                <input type="radio" id="location4" class="location" name="location" value="1">
+                                <label class="location-label" for="location4">Landmark Movie - 000 Street</label>
+                            </div>
+                            <div class="radio-2">
+                                <input type="radio" id="location5" class="location" name="location" value="5">
+                                <label class="location-label"for="location5">Supernova - 123 Cavendish Drive</label>
+                            </div>
+                            <div class="radio-3">
+                                <input type="radio" id="location6"class="location" name="location" value="4">
+                                <label class="location-label"for="location6">Navie Theater - 222 Brampton St.</label>
+                            </div>
+                        </div>
+                        <div class="radio-input" id="radio-Oakville" onclick="checkRadio()" onchange="createMovieList()">
+                            <div class="radio-1">
+                                <input type="radio" id="location7" class="location" name="location" value="6">
+                                <label class="location-label"for="location7">Cinneplex Churchill - Churchill Street</label>
+                            </div>
+                            <div class="radio-2">
+                                <input type="radio" id="location8" class="location" name="location" value="2">
+                                <label class="location-label"for="location8">SilverCity - 333 Oakville Drive</label>
+                            </div>
+                            <div class="radio-3">
+                                <input type="radio" id="location9"class="location" name="location" value="1">
+                                <label for="location9">Gourmet Niv - 345 Dixon St.</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-row" id="movieListRow">
+                        <div class="fourth-div">
+                            <div class="movies-list">
+                                <label for="movieList" id="numberText">List of Movies</label>
+                                <select name="movieList" required id="movieList"></select>
+                                <h2 id="movieCheck" class="warning">You must select 1 movie</h2>
+                            </div>
+                            <div class="date-movies">
+                                <label for="date"id="numberText">Show Date</label>
+                                 <input type="date" id="date" required class="date" name="date">
+                                 <h2 class="warning" id="dateCheck">You must select date </h2>
+                            </div>
+                        </div>
+                        <div class="ticket-numb">
+                            <label for="counting" id="numberText">Number of Tickets</label>
+                            <div class="ticket">
+                                <button type="button"class="counter" id="increment" onclick="handleIncrement()"> + </button>
+                                <input type="number" required name="counting" id="counting" value="0" min="0" readonly>
+                                <button type="button"class="counter" id="decrement" onclick="handleDecrement()"> - </button>
+                            </div>
+                            <h2  class="warning" id="warningText">You must at least purchase 1 ticket</h2>
+                        </div>
+                    </div>
+                    <div id="thirdRow">
+                        <div class="showTime-movies">
+                            <h2 id="numberText">Available Showtime</h2>
+                        </div>
+                        <div class="button-container">
+                            <button class="button" id="button1" type="button"></button>
+                            <button class="button" id="button2"  type="button"></button>
+                            <button class="button" id="button3"  type="button"></button>
+                            <button class="button" id="button4"  type="button"></button>
+                            <button class="button" id="button5"  type="button"></button>
+                            <button class="button" id="button6" type="button"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-part" id="second-part">
+                    <hr>
+                    <h3 class="userDetails">Enter your user details</h3>
+                    <div class="first-row" id="second-part">
+                        <div class="first-element">
+                            <label for="fname">First name:</label><br>
+                            <input type="text" required class="second-input" id="fname" name="fname"
+                            placeholder="Enter your first name"><br>
+                        </div>
+                        <div class="second-element">
+                            <label for="lname">Last name:</label><br>
+                            <input type="text" required class="second-input" id="lname" name="lname"
+                            placeholder="Enter your last name">
+                        </div>
+                    </div>
+                    <div class="second-row" id="second-part">
+                        <div class="first-element">
+                            <label for="email">Email:</label><br>
+                            <input type="email" required class="second-input" id="email" name="email" 
+                            placeholder="Enter your mail" autocomplete="off">
+                        </div>
+                        <div class="fourth-div second-part">
+                            <div class="second-element">
+                                <label for="gender">Gender:</label><br>
+                                <select name="gender" required id="gender"></select></div>
+                            </div>
+                            <div class="second-element" id="third-element">
+                                <label for="age">Age:</label><br>
+                                <input required type="number" class="second-input age" id="age" name="age" min="20">
+                                <h2  class="warning" id="ageWarning"> Must be above 20 </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="third-section">
+                    <div class="total-amount">
+                        <label for="totalAmount">Total Amount</label>
+                        <input type="text" id="totalAmount" class="totalAmount" 
+                        data-price="10"  value="$0"readonly>
+                    </div>
+                    <input type="submit" id="submit" onclick="retrieveData()" name="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <footer id="footerDisplay"></footer>
+    <script src="./scripts/do10.js"></script> 
+    <script type="text/javascript" src="./scripts/headerFooter.js"></script>
+    <script type="text/javascript" src="./scripts/newScript.js"></script>
+</body>
+</html>

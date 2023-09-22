@@ -1,0 +1,77 @@
+<html lang="en">
+<head><meta charset="windows-1252">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do10-991673528-Result page</title> 
+    <link href="../stylesheet/resultStyles.css" rel="stylesheet">
+</head>
+<body onload="makeHeader();makeFooter();loadReport()">
+    <header id="navigation"></header>
+    <div class="second-div">
+        <div class="firstTwo">
+            <button onclick="goToIndex()">Go Back</button>
+            <h1 id="transaction">ðŸŽ‰ðŸŽ‰ Transaction Successful ðŸ¥³ðŸ¥³</h1>
+        </div>
+        <div class="movie-display">
+            <div class="first-column">
+                <h2 id="movieTitle"></h2>
+            </div>
+            <div class="second-column" id="second-column">
+                <div class="display" id="date-display">
+                    <h3><label for="outdate">Date</label></h3>
+                    <input class="end-text" type="text" id="outdate" name="outdate" readonly>
+                </div>
+                <div class="display" id="city-display">
+                    <h3><label for="outcity">City</label></h3>
+                    <input class="end-text" name="outcity" type="text" id="outcity" readonly>
+                </div>
+            </div>
+            <div class="receipt">
+                <h3 class="booked-by">This receipt is booked by</h3>
+                <div class="second-column" id="third-column">
+                <div class="display " id="first-name">
+                    <h3><label for="outfName">First Name</label></h3>
+                    <input class="end-text" type="text" id="outfName" name="outfName" readonly>
+                </div>
+                <div class="display " id="last-name">
+                    <h3><label for="outlName">Last Name</label></h3>
+                    <input class="end-text" type="text" id="outlName" name="outlName" readonly>
+                </div>
+            </div>
+            <div class="second-column" id="fourth-column">
+                <div class="display" id="email">
+                    <h3><label for="outemail">Email</label></h3>
+                    <input class="end-text" type="text" id="outemail" name="outemail" readonly>
+                </div>
+                <div class="display" id="age">
+                    <h3><label for="outAge">Age</label></h3>
+                    <input class="end-text" type="text" id="outAge" name="outAge" readonly>
+                </div>
+            </div>
+            <hr>
+            <div class="fifth-column">
+                <h3 class="booked-by" id="payInfo">Payment Information</h3>
+                <div class="display" id="ticketNumber">
+                    <h3><label for="outtickNumb">Number of Ticket</label></h3>
+                    <input type="text" id="outtickNumb" name="outtickNumb"  readonly>
+                </div>
+                <div class="display" id="totalAmount">
+                    <h3><label for="outtotal">Total Amount</label></h3>
+                    <input type="text" id="outtotal" name="outtotal" readonly>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <footer id="footerDisplay"></footer>
+    <script>
+    // function that only works for this page. Else there'll be uncaught error
+        setInterval(function () {
+        var randomColor = Math.floor(Math.random()*16777215).toString(16);
+        document.querySelector('h1').style.color = "#"+randomColor;
+      }, 1000); 
+    </script>
+    <script type="text/javascript" src="../scripts/headerFooter.js"></script>
+    <script src="../scripts/newScript.js"></script>
+</body>
+</html>

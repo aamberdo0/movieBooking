@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.second-div {
+    scroll-behavior: unset;
+    background-color: #fefae0;
+}
+
+header,
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 20px;
+    background-color: #283618;
+    color: #fefae0;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.firstTwo {
+    position: relative;
+    left: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    top: 20px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+#movieTitle {
+    font-size: 32px;
+    text-align: center;
+    color: #283618;
+}
+
+button {
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    background-color: #283618;
+    color: #fefae0;
+    font-size: 18px;
+    border: 1px solid #fefae0;
+    cursor: pointer;
+}
+
+.movie-display {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 40px;
+    gap: 36px;
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 50px;
+}
+
+.second-column {
+    display: flex;
+    justify-content: space-between;
+}
+
+#outdate,
+#outcity,
+#outlocation {
+    background-color: #fefae0;
+    color: #283618;
+    text-align: center;
+}
+
+.receipt {
+    border: 2px solid black;
+    width: 70%;
+    /* Adjusted width */
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: white;
+    color: #283618;
+    border-radius: 10px;
+}
+
+.display {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    justify-content: space-around;
+}
+
+#outemail {
+    width: 66%;
+}
+
+#outemail,
+#outlName,
+#outfName,
+#outAge {
+    text-align: end;
+}
+
+#second-column {
+    display: flex;
+    justify-content: space-around;
+}
+
+input {
+    text-align: center;
+    border: none;
+    font-size: 19px;
+    background-color: white;
+    color: #283618;
+}
+
+.booked-by {
+    padding-left: 15px;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.fifth-column {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    padding-bottom: 35px;
+}
+
+#ticketNumber,
+#totalAmount {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#outtickNumb {
+    width: 80px;
+    margin-right: 10px;
+}
+
+#outtotal {
+    width: 80px;
+}
+
+#third-column,
+#fourth-column {
+    padding: 0px 20px;
+    gap: 30px;
+}
+
+#payInfo {
+    padding-top: 0px;
+}
+
+hr {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#outfName {
+    width: 168px;
+}
+
+/* Media queries */
+/* laptop mode */
+@media(min-width:955px) {
+    #outemail {
+        text-align: end;
+        width: 270px;
+    }
+
+    #third-column.second-column,
+    #fourth-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .display {
+        width: 100%;
+
+    }
+}
+
+@media(max-width:957px) {
+
+    #third-column,
+    #fourth-column {
+        flex-direction: column;
+    }
+
+    #first-name,
+    #last-name,
+    #email,
+    #age {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #second-column {
+        flex-direction: column;
+        gap: 37px;
+        padding-bottom: 15px;
+    }
+
+    .display {
+        width: 100%;
+    }
+}
+
+/* tablet mode */
+@media(max-width:660px) {
+    header,
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 28px;
+    }
+
+    #movieTitle {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .end-text {
+        text-align: end;
+    }
+
+    .receipt {
+        width: 90%;
+    }
+
+}
+
+@media(max-width:560px) {
+    #second-column {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media(max-width:496px) {
+    .receipt {
+        width: 90%;
+    }
+}
+
+/* phone mode */
+@media(max-width:455px) {
+    .end-text {
+        text-align: center;
+    }
+
+    .second-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .movie-display {
+        padding-left: 0px;
+        gap: 22px;
+    }
+
+    .display {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        padding: 20px;
+    }
+
+    #outtotal,
+    #outtickNumb {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #date-display,
+    #city-display,
+    #location-display {
+        flex-direction: row;
+
+    }
+
+    #outemail,
+    #outlName,
+    #outfName,
+    #outAge {
+        text-align: center;
+    }
+
+    #outemail {
+        width: 100%;
+    }
+
+    #second-column,
+    #third-column,
+    #fourth-column {
+        gap: 0px;
+    }
+
+    .receipt {
+        gap: 0px;
+        width: 80%;
+    }
+
+    .fifth-column {
+        align-items: center;
+        gap: 0px;
+        padding: 20px 0px 30px 0px;
+    }
+
+    #ticketNumber,
+    #totalAmount {
+        flex-direction: column;
+        padding: 20px 0px;
+
+    }
+
+    #payInfo {
+        font-size: 7vw;
+        padding-bottom: 10px;
+    }
+
+    .booked-by {
+        padding-left: 0px;
+        padding-bottom: 20px;
+    }
+
+    hr {
+        margin-top: 20px;
+    }
+
+    #first-name,
+    #last-name {
+        gap: 20px;
+    }
+}
+
+@media(max-width:400px) {
+    .receipt {
+        width: 90%;
+    }
+}
+
+@media(max-width:355px) {
+    .receipt {
+        gap: 0px;
+        width: 90%;
+    }
+
+    .booked-by,
+    #payInfo {
+        font-size: 7vw;
+    }
+
+    #second-column {
+        justify-content: space-around;
+    }
+
+    .display {
+        justify-content: center;
+        align-items: center;
+    }
+}
