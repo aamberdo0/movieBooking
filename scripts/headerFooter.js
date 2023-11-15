@@ -2,7 +2,7 @@
 function makeHeader(){
     const headerCountry = `Vietnam`; 
     const headerName = `Amber Do`; 
-    const headerTitle = `Fall 2023 Assignment 1`;   
+    const headerTitle = `Galaxy Skyway`;   
     const header = document.getElementById("navigation"); 
     header.innerHTML = `<h3 id ="headerTitle">${headerTitle}</h3>`; 
     header.innerHTML += `<h3 id ="headerName">${headerName}</h3>`; 
@@ -11,8 +11,8 @@ function makeHeader(){
 
 // function that creater footer
 function makeFooter(){
-    const footerText1 = `do10 `; 
-    const footerText2 = `991673528`;
+    const footerText1 = `Amber Do `; 
+    const footerText2 = `Galaxy Skyway`;
     const footerText3= `Software Engineering`; 
     const footer = document.getElementById("footerDisplay"); 
     footer.innerHTML = `<h3 id ="footerText1">${footerText1}</h3>`; 
