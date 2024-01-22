@@ -9,7 +9,9 @@
 - LinkedIn: [ Amber Do](https://www.linkedin.com/in/amber-do04/)
 
 ## Challenges + Lesson Learned: 
-- This is my first time retrieve user information and render its data dynamically using DOM element. I also learnt how to save key/pair value with Local Storageb to save history session and how to implement Swipper JS to enhance user-friendly UI displaying movie headers. 
+- This is my first time retrieve user information and render its data dynamically using DOM elements.
+- I also learnt how to save key/pair value with Local Storage to save history session and
+- I learnt how to implement Swipper JS to enhance user-friendly UI in displaying movie posters headers. 
 
 
 ## Acknowledgements
