@@ -11,8 +11,6 @@
 ## Challenges + Lesson Learned: 
 - This is my first time retrieve user information and render its data dynamically using DOM element. I also learnt how to save key/pair value with Local Storageb to save history session and how to implement Swipper JS to enhance user-friendly UI displaying movie headers. 
 
-## Future Improvement:
-- For furture features, this application can allow authenticated user to create their own movie list and store the list using Firestore Database. Furthermore, users can write, update and delete their own movie review. 
 
 ## Acknowledgements
  - [How to use Swiper library](https://swiperjs.com/swiper-api)
